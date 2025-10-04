@@ -1,0 +1,74 @@
+# VSD BabySoC
+
+## What is BabySoC?
+
+The **BabySoC** is a simplified **System-on-Chip model** created by VLSI System Design (VSD) as a teaching and practice platform for beginners in chip design. It abstracts away the complexity of industrial-grade SoCs while still covering the essential concepts like:
+
+* CPU (processor core)
+* Memory
+* Peripherals
+* Interconnect (bus system)
+
+By simulating BabySoC, learners can build **hands-on intuition** about how these blocks interact and how data flows through a chip — without getting lost in the massive scale of real SoCs like Snapdragon or Apple A-series.
+
+---
+
+## Why BabySoC?
+
+* **Educational Purpose:** Makes SoC design approachable for students and enthusiasts.
+* **Simplified Blocks:** Uses minimal building blocks while still reflecting real SoC architecture.
+* **Hands-On Simulation:** Can be functionally modeled using open-source tools like **Icarus Verilog** and **GTKWave**.
+* **Step to Industry Projects:** Forms a foundation for understanding larger designs and moving toward RTL, synthesis, and physical design.
+
+---
+
+## BabySoC Architecture
+
+![BabySoC Block Diagram](figures/baby_soc_block.png)
+*Figure: Simplified block diagram of VSD BabySoC.*
+
+**Key Components in BabySoC:**
+
+1. **CPU Core (RV32I based RISC-V)** – Handles instruction execution.
+2. **Memory (Instruction + Data)** – Stores code and temporary variables.
+3. **Peripherals (GPIO, UART, Timers)** – Allow interaction with external devices.
+4. **Interconnect (Bus)** – Connects the CPU, memory, and peripherals together.
+
+---
+
+## BabySoC in the Learning Journey
+
+* **Step 1 – Functional Modelling:**
+
+  * BabySoC is first explored at the *behavioral* level.
+  * Simulation validates that the architecture works logically.
+  * Example: Running small RISC-V programs and observing outputs in GTKWave.
+
+* **Step 2 – RTL Design:**
+
+  * Once the functional model is correct, RTL implementation can be created.
+
+* **Step 3 – Physical Design:**
+
+  * The verified RTL can later be synthesized and implemented in silicon (ASIC flow).
+
+---
+
+## Tools for BabySoC Simulation
+
+* **Icarus Verilog (iverilog):** Compiles and simulates Verilog code.
+* **GTKWave:** Visualizes waveforms from simulation (helps debug timing and logic).
+
+**Typical Workflow:**
+
+1. Write BabySoC Verilog model.
+2. Run with Icarus Verilog to generate `.vcd` waveforms.
+3. Open results in GTKWave to inspect signals.
+
+---
+
+## Summary
+
+* **VSD BabySoC** is a simplified SoC that serves as a **learning model** for newcomers.
+* It captures the **essence of SoC design** (CPU, memory, peripherals, interconnect) without overwhelming complexity.
+* By simulating BabySoC, learners gain practical exposure to **functional modeling**, which is a **crucial first step** before RTL design and physical implementation.
